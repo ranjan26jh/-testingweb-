@@ -1,0 +1,118 @@
+#include<stdio.h>
+void main()
+{
+    int year;
+    printf("Enter the year");
+    scanf("%d",&year);
+    
+    if(year%400==0|| year%4==0 && year%100!=0)
+    {
+        printf("leap year");
+    }
+    else
+    {
+        printf("not leap year");
+    }
+}
+
+
+
+
+#include<stdio.h>
+void main()
+{
+    int n,count=0,i;
+    printf("Enter any number:");
+    scanf("%d",&n);
+    
+    for(i=1;i<=n;i++)
+    {
+        if(n%i==0)
+        {
+            count++;
+        }
+    }
+    if(count==2)
+    printf("prime Number");
+    else
+    printf("Not prime number");
+}
+
+
+
+//Program of Armstrong Number
+#include<stdio.h>
+void main()
+{
+    int n,arm=0,r,c;
+    printf("Enter any Number");
+    scanf("%d",&n);
+    c=n;
+    while(n>0)
+    {
+        r=n%10;
+        arm=arm+(r*r*r);
+        n=n/10;
+    }
+    if(c==arm)
+    printf("Armstrong Number");
+    else
+    printf("Not Armstrong Number");
+}
+
+
+
+//Program of sum of digit
+#include<stdio.h>
+void main()
+{
+    int n,sum=0,r;
+    printf("Enter a number");
+    scanf("%d",&n);
+    
+    while(n>0)
+    {
+        r=n%10;
+        sum=sum+r;
+        n=n/10;
+    }
+    printf("sum of digit is %d",sum);
+    
+    
+}
+
+
+
+//Fibannocci Series
+#include<stdio.h>
+void main()
+{
+    //0 1 1 2 3 5 8 13 
+    int n,i,a=-1,b=1,c;
+    printf("Enter a number");
+    scanf("%d",&n);
+    for(i=1;i<=n;i++)
+    {
+        c=a+b;
+        printf("%d ",c);
+        a=b;
+        b=c;
+    }
+    
+    
+}
+
+
+//swapping without using third variable
+
+#include<stdio.h>
+void main()
+{
+    int a,b;
+    printf("Enter two number");
+    scanf("%d%d",&a,&b);
+    a=a+b;
+    b=a-b;
+    a=a-b;
+    printf("a=%d b=%d",a,b);
+}
