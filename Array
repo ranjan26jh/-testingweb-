@@ -1,0 +1,170 @@
+//To add the contents of an Array
+
+#include<stdio.h>
+void main()
+{
+    int x[10],i,n,sum=0;
+    printf("Enter the elments");
+    scanf("%d",&n);
+    for(i=1;i<=n;i++)
+    {
+        scanf("%d",&x[i]);
+         sum=sum+x[i];
+    }
+
+
+    printf("%d",sum);
+
+}
+
+
+
+//To find out the avg. of all the no. stored in a Array
+
+#include<stdio.h>
+void main()
+{
+    int x[10],i,n,sum=0,avg;
+    printf("Enter the elments");
+    scanf("%d",&n);
+    for(i=1;i<=n;i++)
+    {
+        scanf("%d",&x[i]);
+         sum=sum+x[i];
+    }
+    avg=sum/n;
+    printf("%d",avg);
+
+}
+
+
+
+
+//To search a no. from an Array of Numbers
+
+#include<stdio.h>
+void main()
+{
+    int x[10],i,n,sum=0,search;
+    printf("Enter the elments");
+    scanf("%d",&n);
+    for(i=0;i<=n;i++)
+    {
+        scanf("%d",&x[i]);
+
+    }
+    printf("Enter the no. you want to search");
+    scanf("%d",&search);
+
+    for(i=0;i<=n;i++)
+    {
+
+        if(x[i]==search)
+        {
+
+            printf("Search no. is at location %d",i+1);
+
+        }
+        if(i==n)
+        {
+
+            printf("Search no is not available");
+        }
+    }
+
+}
+
+
+
+
+//To add the number availabe in odd position
+
+#include<stdio.h>
+void main()
+{
+    int x[50],i,n,sum=0;
+    printf("Enter the elements in array");
+    scanf("%d",&n);
+
+    for(i=0;i<=n;i++)
+    {
+        scanf("%d",&x[i]);
+    }
+    for(i=0;i<=n;i++)
+    {
+        if(i%2!=0)
+            sum=sum+x[i];
+    }
+    printf("the sum is%d",sum);
+}
+
+
+
+
+//To reverse the set of no. in an array
+
+#include<stdio.h>
+void main()
+{
+    int i,n,x[100];
+    printf("Enter the elements in array");
+    scanf("%d",&n);
+
+    for(i=0;i<=n;i++)
+    {
+        scanf("%d",&x[i]);
+    }
+    int rev[n],j=0;
+    for(i=n;i>=0;i--)
+    {
+
+    rev[j]=x[i];
+    j++;
+    }
+    printf("the reverse elements are");
+
+    for(i=0;i<=n;i++)
+    {
+        printf("%d",rev[i]);
+    }
+
+}
+
+
+
+
+// frequency of an array
+#include<stdio.h>
+void main()
+{
+    int a[100],b[100],n,i,j,c=0;
+    printf("Enter size of an array");
+    scanf("%d",&n);
+    printf("Enter elements of an array");
+
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+
+    for(i=0;i<n;i++)
+    {
+        c=1;
+        for(j=i+1;j<n;j++)
+        {
+            if(a[i]==a[j])
+            {
+                c++;
+                a[j]=-1;
+            }
+        }
+        b[i]=c;
+    }
+    for(i=0;i<n;i++)
+    {
+        if(a[i]!=-1)
+        {
+            printf("no of %d is %d\n",a[i],b[i]);
+        }
+    }
+}
